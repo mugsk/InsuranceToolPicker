@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+    <html>
+        <head lang="en">
+            <meta charset="UTF-8">
+            <title>Insurance Picker Tool</title>
+            <link rel="stylesheet" href="css/styles.css"/>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        </head>
+        <body>
+
+        <div id="navigation">
+            <ul class="breadcrumb">
+
+            </ul>
+        </div>
+
+            <!--Screen 1 Main Screen -->
+            <div id="mainScreen" class="screen">
+
+            <h1>Available Plans</h1>
+
+                <div class="plan">
+                    <h3>Limited Coverage</h3>
+                    <p>Limited Coverage plan provides the basic protection, and may not be adequate. It may cost you less, but the
+                    coverage is limited to pre-defined clause of fixed amount of charges. Must read policy details for benefit and
+                    coverage details.</p>
+                     <a class="nav-button" href="#limitedPlansScreen">Select</a>
+                </div>
+                <div class="plan">
+                    <h3>Comprehensive Coverage</h3>
+                    <p> These plans offer much better and flexible coverage. Most of these plans work like PPO type of 80-20&#37; plan. Means
+                    insured have to pay 20&#37; of the cost for the first &#36;5,000 per policy period, policy pays rest 80&#37;. </p>
+                    <a class="nav-button" href="#comprehensivePlansScreen">Select</a>
+                </div>
+            </div>
+
+
+            <!--Screen 2 - Limited Coverage Plans-->
+
+            <div id="limitedPlansScreen" class="limited-container">
+
+
+               <h2>Limited Coverage</h2>
+
+               <div class="limited-plan">
+
+                    <div class="plan-title"> <h3> Limited <br>Plan A </h3></div>
+
+                    <div class="description">
+                        <h3>Limited Plan A</h3>
+                        <p>Limited Plan A provides basic medical coverage for non-U.S.citizens, who come to U.S. for business, pleasure,
+                        to study, or to immigrate with a maximum coverage of &#36;120,000. </p>
+                    </div>
+
+                      <div class="button-bg"> <a class="nav-button plan-link" href="#personalDetailsScreen">Select</a></div>
+               </div>
+
+
+
+
+                <div class="limited-plan">
+
+                    <div class="plan-title"> <h3> Limited <br>Plan B </h3></div>
+
+                    <div class="description">
+                        <h3>Limited Plan B</h3>
+                        <p>Limited Plan B provides basic medical coverage for non-U.S.citizens, who come to U.S. for business, pleasure,
+                            to study, or to immigrate with a maximum coverage of &#36;140,000. </p>
+                    </div>
+
+                    <div class="button-bg"><a class="nav-button" href="#personalDetailsScreen">Select</a></div>
+                </div>
+
+            </div>
+
+            <!--Screen 3 Comprehensive Coverage Plans-->
+            <div id="comprehensivePlansScreen" class="limited-container">
+
+                <h2>Comprehensive Coverage</h2>
+
+                <div class="limited-plan">
+                    <div class="comprehensive-plan-title"> <h3> Comprehensive <br>Plan A </h3></div>
+                    <div class="description">
+                        <h3>Comprehensive Plan A</h3>
+                        <p>Plan A offers medical coverage and emergency services to individuals and families travelling
+                        outside their Home Countries.</p>
+                    </div>
+                    <div class="button-bg"> <a class="nav-button" href="#personalDetailsScreen">Select</a></div>
+                </div>
+
+
+
+
+                <div class="limited-plan">
+
+                    <div class="comprehensive-plan-title"> <h3> Comprehensive <br>Plan B </h3></div>
+                    <div class="description">
+                        <h3>Comprehensive Plan B</h3>
+                        <p>Plan A offers medical coverage and emergency services to individuals and families travelling
+                            outside their Home Countries. The plan pays 75&#37; of eligible expenses to the selected Medical Maximum. </p>
+                    </div>
+                    <p class="button-bg"><a class="nav-button" href="#personalDetailsScreen">Select</a></p>
+                </div>
+
+                <div class="limited-plan">
+
+                    <div class="comprehensive-plan-title"> <h3> Comprehensive <br>Plan C </h3></div>
+                    <div class="description">
+                        <h3>Comprehensive Plan C</h3>
+                        <p>Plan C offers medical coverage and emergency services to individuals and families travelling
+                            outside their Home Countries. </p>
+                    </div>
+                    <div class="button-bg"><a class="nav-button" href="#personalDetailsScreen">Select</a></div>
+                </div>
+
+
+            </div>
+
+          <!--Screen 4 Personal Details -->
+            <div id="personalDetailsScreen" class="limited-container">
+
+
+                <h2>Personal Details</h2>
+
+                <form id="insurerForm1" name="insurerDetailsForm" method="post" action="sample.php">
+
+
+                    <!--<div class="form-container">-->
+
+                     <h4>Insured # 1 </h4>
+
+                     <p class="errors">Please ensure all fields marked in red are filled.</p>
+
+                        <div class="form-content">
+
+                            <div>
+                                <label  class="required">Name </label>
+                                <input type="text" size="40" required name="name">
+                            </div>
+
+                            <br>
+                            <div>
+                                <label  class="required">Address</label>
+                                <input type="text" size="40" required name="address1">
+                                <br><br><label></label><input type="text" name="address2" >
+                            </div>
+
+                            <br>
+                            <div>
+                               <label  class="required" >Start Date </label>
+                               <input type="text" size="10" class="datepicker" required name="sdate">
+                            </div>
+
+                            <br>
+                            <div>
+                               <label  class="required">End Date </label>
+                               <input type="text" size="10" class="datepicker" required name="edate">
+                            </div>
+                        <!--</div>-->
+
+                    </div>
+
+
+                </form>
+
+                <div class="submitContainer">
+                    <br><br><a id="addNewInsured" href="#personalDetailsScreen">+ Add more Insured </a>
+                    <input id="formSubmitBtn" name="submit" type="submit" value="Submit"/>
+                </div>
+
+            </div>
+
+            <!--Screen 5 Thank You Page -->
+            <div id="successfulSubmissionScreen" class="limited-container">
+
+            </div>
+
+
+            <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+            <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function(){
+
+                //to map the id's with the navbar names
+                var breadcrumbs = {
+                                    "mainScreen" : "Plans",
+                                    "limitedPlansScreen" : "Limited Coverage",
+                                    "comprehensivePlansScreen" : "Comprehensive Coverage",
+                                    "personalDetailsScreen" : "Personal Details",
+                                    "successfulSubmissionScreen" : "Thank You"
+                }
+
+                //weights for each screen to manipulate the history stack object
+
+                var breadcrumbWeights = {
+                    "mainScreen" : 1,
+                    "limitedPlansScreen" : 2,
+                    "comprehensivePlansScreen" : 2,
+                    "personalDetailsScreen" : 3,
+                    "successfulSubmissionScreen" : 4
+                }
+
+
+                //Initialize breadcrumbs history with the first screen
+
+                var breadcrumbsHistory = ["mainScreen"];
+
+                $(".datepicker").datepicker();
+
+
+                $("#personalDetailsScreen").delegate("#formSubmitBtn","click",function(e){
+
+                    e.preventDefault();
+
+                    //Fetch all the forms and call the form validator
+                    var formValidationSuccess = [];
+                    var formUserNames = [];
+                    $("form").each( function(index,el){
+
+
+                        //Validating the form
+
+                        var formId = $(this).attr("id");
+                        var name = $("#"+formId+" input[name='name']");
+                        var address = $("#"+formId+" input[name='address1']");
+                        var startDate = $("#"+formId+" input[name='sdate']");
+                        var endDate = $("#"+formId+" input[name='edate']");
+                        var userName = name.val();
+                        var userAddress = address.val();
+                        var userStartDate = startDate.val();
+                        var userEndDate = endDate.val();
+
+
+                        if(!name.val()){
+
+                            name.addClass("error");
+                        } else {
+                            formUserNames.push(name.val());
+                            name.removeClass("error");
+                        }
+
+                        if (!address.val()){
+
+                            address.addClass("error");
+                        } else {
+                            address.removeClass("error");
+
+                        }
+
+                        if (!startDate.val()){
+
+                            startDate.addClass("error");
+                        } else {
+                            startDate.removeClass("error");
+
+                        }
+
+                        if (!endDate.val()){
+
+                            endDate.addClass("error");
+
+                        } else {
+                            endDate.removeClass("error");
+
+                        }
+
+                        if (!(userName && userAddress && userStartDate && userEndDate)) {
+                            formValidationSuccess.push(false);
+                            $(".errors").show();
+                        }
+                        else{
+                            formValidationSuccess.push(true);
+                            $(".errors").hide();
+                        }
+
+                    }); // end form validation
+
+                    if($.inArray(false,formValidationSuccess)==-1){
+                        var insurerNames = $.each(formUserNames, function(index,value){ value + " ";});
+
+                        $("#personalDetailsScreen").hide();
+                        location.hash = "#successfulSubmissionScreen";
+                        $("#successfulSubmissionScreen").html("  <h4>Thank You</h4><p> Thank You for choosing Insurance for <em> "+ insurerNames+".</em> Your information has been submitted successfully.</p>");
+                        return true;
+
+                    } else {
+
+                        return false;
+                    }
+
+                });
+
+
+
+                $("#personalDetailsScreen").delegate("#addNewInsured","click",function(e){
+                  e.preventDefault();
+                    // Check all form fields have been completed
+                           var allFormsCompleted = true;
+
+                           $("form").each(function(){
+
+                               $(this).find("input").trigger("change");
+                               var errorElements = $(this).find(".form-content > div > .error");
+                               if(errorElements.length!=0){
+                                   allFormsCompleted = false;
+
+                               }
+                           });
+                           if(allFormsCompleted) {
+                               var insurerForm = $("form[id='insurerForm1']");
+                               var submitContainer = $(".submitContainer");
+                               submitContainer.remove();
+                               var insurerID = Number($("form[name='insurerDetailsForm']").last().children("h4").text().replace(/[^0-9]/g, '')) + 1;
+                               var $newInsurerFormInstance = insurerForm.clone(true);
+                               $newInsurerFormInstance.attr("id", "insurerForm" + insurerID);
+                               $newInsurerFormInstance.find("input:text").eq(0).val("").removeClass("error");
+                               $newInsurerFormInstance.find("input:text").eq(1).val("").removeClass("error");
+                               $newInsurerFormInstance.find("input:text").eq(2).val("");
+                               var sdate = $newInsurerFormInstance.find("input:text").eq(3).val();
+                               var edate = $newInsurerFormInstance.find("input:text").eq(4).val();
+
+                               var sdateInput = $newInsurerFormInstance.find('input.datepicker').eq(0);
+                               sdateInput.removeAttr('id').removeClass('datepicker hasDatepicker').val('');
+                               sdateInput.datepicker().val(sdate);
+
+                               var edateInput = $newInsurerFormInstance.find('input.datepicker').eq(1);
+                               edateInput.removeAttr('id').removeClass('datepicker hasDatepicker').val('');
+                               edateInput.datepicker().val(edate);
+
+
+                               $newInsurerFormInstance.children("h4").html("Insured # " + insurerID + "<a href='#personalDetailsScreen' class='closeBtn'>X</a>");
+                               $newInsurerFormInstance.appendTo("#personalDetailsScreen");
+                               submitContainer.appendTo("#personalDetailsScreen");
+                           }else{
+                               alert("Please fill out all the fields before adding new Insurer");
+                           }
+
+                });
+
+                $("form").delegate(".closeBtn","click",function(e){
+                    // Currently deleted Form's ID
+                    var deletedFormId = Number($(this).closest("form").find("h4").text().replace(/[^0-9]/g, ''));
+                    var currentForm = $(this).closest("form");
+
+                    // Get all the descendant forms
+                    currentForm.nextAll("form").each(function(){
+                        $(this).find("h4").html("Insured # " + deletedFormId + "<a href='#personalDetailsScreen' class='closeBtn'>X</a>");
+                        $(this).attr("id", "insurerForm" + deletedFormId);
+                         deletedFormId +=1;
+                    });
+                    currentForm.remove();
+                });
+
+                $( "input[type='text'][required]").change(function(){
+                    if($(this).val()!=""){
+                        $(this).removeClass("error");
+                    }else{
+                        $(".errors").show();
+                        $(this).addClass("error");
+                    }
+                });
+
+               // Function to control the navigation from one screen to another when a user clicks on the link
+
+               function screenNavigationController(fromScreen,targetScreen){
+                var from = $("#"+fromScreen);
+                var to = $("#" + targetScreen);
+                from.hide();
+                to.show();
+
+               }
+
+
+               // Function to dynamically build breadcrumbs navigation
+
+               function buildBreadcrumbsNavBar(fromScreen, targetScreen){
+
+
+                      // Assign weights to all screens, if the screen changes from higher to lower pop an element else push
+                       if(breadcrumbWeights[fromScreen]>breadcrumbWeights[targetScreen]){
+                           var numOfElementsToPop = breadcrumbWeights[fromScreen] -  breadcrumbWeights[targetScreen];
+                           while(numOfElementsToPop!=0){
+                           breadcrumbsHistory.pop();
+                           numOfElementsToPop--;
+                           }
+                       }
+
+                       else if($.inArray(targetScreen, breadcrumbsHistory)==-1)
+                       {
+                           breadcrumbsHistory.push(targetScreen);
+                       }
+
+                       // Select div tag with navigation ID and append the newly constructed list items to it
+
+                   if(targetScreen!="mainScreen"){
+                       var nav = $("#navigation ul");
+                       var list = "";
+
+                       for (var index = 0; index < breadcrumbsHistory.length - 1; index++) {
+                           var listItem = "<li><a href='#" + breadcrumbsHistory[index] + "'>" + breadcrumbs[breadcrumbsHistory[index]] + "&nbsp;&nbsp;>>&nbsp;&nbsp; </a></li>";
+                           list += listItem;
+                       }
+
+                       list += "<li>" + breadcrumbs[breadcrumbsHistory[index]] + "</li>";
+
+                       nav.html(list);
+                       $("#navigation").css("opacity",1);
+                   }else
+                   {
+                       $("#navigation").css("opacity",0);
+
+                   }
+
+
+               }
+
+               // Event handler assigned for URL hashchange event
+
+               window.addEventListener("hashchange", function(evt){
+
+                   var oldURL = evt.oldURL;
+                   var newURL = evt.newURL;
+                   var fromScreen;
+                   var targetScreen;
+                   var pos = oldURL.indexOf("#");
+                   if(pos!= -1){
+                     fromScreen = oldURL.substring((pos+1),oldURL.length);
+                   }
+                   else
+                   {
+                     // The first URL does not have a #value so its assigned mainScreen
+                     fromScreen = "mainScreen"
+                   }
+                   var pos = newURL.indexOf("#");
+                   if(pos!= -1) {
+                       targetScreen = newURL.substring((pos + 1), newURL.length);
+                   }
+
+                else
+                {
+                    targetScreen = "mainScreen"
+                }
+                   screenNavigationController(fromScreen,targetScreen);
+
+                   buildBreadcrumbsNavBar(fromScreen,targetScreen);
+
+                //   console.log("from Screen : " + fromScreen + "\ntargetSCreen : " + targetScreen)
+
+
+               });
+
+
+
+            });//end ready function
+        </script>
+        </body>
+        </html>
